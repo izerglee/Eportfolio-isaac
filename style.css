@@ -371,6 +371,10 @@ align-items: center;
  padding: 28px;
 }
 
+.modal__overlay--visible{
+    z-index: 1;
+}
+
 
 .fa-spinner{
 animation: spinner 750ms infinite linear;
