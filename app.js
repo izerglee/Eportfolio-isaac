@@ -1,6 +1,11 @@
 
 function contact(event) {
-    event.preventDefault()
+    event.preventDefault();
+    const loading = document.querySelector('.modal__overlay--loading');
+    const success = document.querySelector('.modal__overlay--success');    
+    loading.classList += " modal__overlay--visible";
+
+
 emailjs
     .sendForm(
         'service_usg0ybt',
@@ -8,16 +13,12 @@ emailjs
         event.target,
         'oUcotxfYz-zac6T2O'
     ).then( () => {
-        console.log('this worked')
-    }
-    )
-const loading = document.querySelector('.modal__overlay--loading')
-const success = document.querySelector('.modal__overlay--success')
-loading.classList += " modal__overlay--visible"
-setTimeout(() => {
-    loading.classList.remove("modal__overlay--visible")
-    success.classList += " modal__overlay--visible"
-    console.log('it worked')
-}, 1000);
-
+        loading.classList.remove("modal__overlay--visible");
+        success.classList += " modal__overlay--visible";
+        }) .catch(() => {
+            loading.classList.remove("modal__overlay--visible");
+            alert(
+                "The email service is temporarily unavailable. Please contact me directly on izerglee@gmail.com"
+            );
+        })
 }
