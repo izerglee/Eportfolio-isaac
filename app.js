@@ -22,3 +22,8 @@ emailjs
             );
         })
 }
+
+function toggleModal () {
+    // toggle modal
+    console.log('toggleModal()')
+}
