@@ -8,7 +8,7 @@ function contact(event) {
 
 emailjs
     .sendForm(
-        'service_usg0ybt',
+        'service_6jfphwe',
         'template_0f70npt',
         event.target,
         'oUcotxfYz-zac6T2O'
@@ -25,5 +25,5 @@ emailjs
 
 function toggleModal () {
     // toggle modal
-    console.log('toggleModal()')
+document.body.classList +=
 }
