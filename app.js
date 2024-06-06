@@ -23,7 +23,11 @@ emailjs
         })
 }
 
+let isModalOpen = false; 
 function toggleModal () {
-    // toggle modal
+    if (isModalOpen) {
+        return document.body.classList.remove("modal--open");
+    }
+    isModalOpen = !isModalOpen;
 document.body.classList += " modal--open"
 }
