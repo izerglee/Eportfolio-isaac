@@ -25,5 +25,5 @@ emailjs
 
 function toggleModal () {
     // toggle modal
-document.body.classList +=
+document.body.classList += " modal--open"
 }
