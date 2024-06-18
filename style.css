@@ -258,6 +258,8 @@ MODAL
     overflow: hidden;
     display: flex;
     visibility: hidden;
+    z-index: -1;
+    transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
 }
 
 .modal__half{
