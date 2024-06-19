@@ -269,10 +269,18 @@ MODAL
     flex-direction: column;
     justify-content: center;
     position: relative;
+    transition: all 300ms ease-in
+}
+
+.modal--open .modal__about,
+.modal--open .modal__contact
+{
+    transform: translateX(0%);
 }
 
 .modal__about{
     background-color: rgb(245, 245, 245);
+    transform: translate(-110%);
 }
 
 .modal__languages{
@@ -312,6 +320,7 @@ align-items: center;
 .modal__contact{
     background-color: #242424;
     color: white;
+    transform: translateX(110%);
 }
 
 .modal__title{
@@ -361,7 +370,7 @@ align-items: center;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: -1;
@@ -382,6 +391,7 @@ align-items: center;
 
 .modal__overlay--visible{
     z-index: 1;
+    display: flex;
 }
 
 
